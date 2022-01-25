@@ -1,2 +1,2 @@
-# tic-tac-toe
-A simple tic-tac-toe game
+# Tic-tac-toe
+A simple CLI Tic-tac-toe game
