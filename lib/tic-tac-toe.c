@@ -189,63 +189,38 @@ int verify_winner(){
 
     // Horizontal
 
-    if(strncmp(board[0], board[1], 1) == 0 && strncmp(board[1], board[2], 1) == 0){
-        if(strncmp(board[1], " ", 1) == 0)
-            return -1;
-
+    if(board[0][0] == board[1][0] && board[1][0] == board[2][0])
         return 0;
-    }
-    else if(strncmp(board[3], board[4], 1) == 0 && strncmp(board[4], board[5], 1) == 0){
-        if(strncmp(board[4], " ", 1) == 0)
-            return -1;
-
+    
+    else if(board[3][0] == board[4][0] && board[4][0] == board[5][0])
         return 0;
-    }
-    else if(strncmp(board[6], board[7], 1) == 0 && strncmp(board[7], board[8], 1) == 0){
-        if(strncmp(board[6], " ", 1) == 0)
-            return -1;
-        
+    
+    else if(board[6][0] == board[7][0] && board[7][0] == board[8][0])
         return 0;
-    }
     
     // Vertical
 
-    else if(strncmp(board[0], board[3], 1) == 0 && strncmp(board[3], board[6], 1) == 0){
-        if(strncmp(board[6], " ", 1) == 0)
-            return -1;
-        
+    else if(board[0][0] == board[3][0] && board[3][0] == board[6][0])
         return 0;
-    }
-    else if(strncmp(board[1], board[4], 1) == 0 && strncmp(board[4], board[7], 1) == 0){
-        if(strncmp(board[4], " ", 1) == 0)
-            return -1;
-        
+    
+    else if(board[1][0] == board[4][0] && board[4][0] == board[7][0])
         return 0;
-    }
-    else if(strncmp(board[2], board[5], 1) == 0 && strncmp(board[5], board[8], 1) == 0){
-        if(strncmp(board[5], " ", 1) == 0)
-            return -1;
-        
+    
+    else if(board[2][0] == board[5][0] && board[5][0] == board[8][0])
+       
         return 0;
-    }
-
+    
     // Diagonal
 
-    else if(strncmp(board[0], board[4], 1) == 0 && strncmp(board[4], board[8], 1) == 0){
-        if(strncmp(board[0], " ", 1) == 0)
-            return -1;
-        
+    else if(board[0][0] == board[4][0] && board[4][0] == board[8][0])
         return 0;
-    }
-    else if(strncmp(board[2], board[4], 1) == 0 && strncmp(board[4], board[6], 1) == 0){
-        if(strncmp(board[2], " ", 1) == 0)
-            return -1;
-        
+    
+    else if(board[2][0] == board[4][0] && board[4][0] == board[6][0])
         return 0;
-    }
+    
 
     for(int i = 0; i < 9; i++){
-        if(strncmp(board[i], " ", 1) == 0)
+        if(board[i][0] == ' ')
             return -1;
     }
 
