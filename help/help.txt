@@ -1,0 +1,28 @@
+-=-=-=-=-=-=-=-=-=-=-=-| Tic-tac-toe |-=-=-=-=-=-=-=-=-=-=-=-
+
+[-] This game is based on the moves made in chess.
+
+==> Example: Do you want to play on the last square of the 3x3 board? 
+The equivalent move would be C3.
+
+
+    1      2      3
+        |     |     
+A       |     |    
+   _____|_____|______
+        |     |       
+B       |     |    
+   _____|_____|______
+        |     |       
+C       |     |  X
+   _____|_____|______
+        |     |       
+
+[-] A general report of each game is always generated at the end of a match with an 
+identification code. The reports are saved in the <reports> directory.
+
+[-] There are two important scripts: clear-reports and read-reports. 
+The clear-reports script serves to delete all previously generated reports 
+within the <reports> directory. The read-report script is used to read a 
+specific report from its identification code and to use it run the script 
+by sending a valid identification code as parameter.
