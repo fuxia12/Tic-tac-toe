@@ -49,8 +49,8 @@ int generate_report(void){
   
     fprintf(file, "-=-=-=-=-=-=-=-=-=-=-=-=-=-| Tic-Tac-Toe |-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
     fprintf(file, "\n\n[-] Report generated at %d:%d:%d on %d/%d/%d", ptime->tm_hour, 
-    ptime->tm_min, ptime->tm_sec, ptime->tm_mday, 
-    ptime->tm_mon+1, ptime->tm_year+1900);
+    ptime->tm_min, ptime->tm_sec, ptime->tm_year+1900, 
+    ptime->tm_mon+1, ptime->tm_mday);
     fprintf(file, "\n\n[-] This report was generated automatically at the end of a match");
     fprintf(file, "\n\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-| Report |-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-");  
     fprintf(file, "\n\n[-] %s (%c) vs (%c) %s", info.players[0], info.moves[0], 
@@ -230,7 +230,6 @@ int verify_winner(){
 void computer_move(void){
     
     int i = -1;
-    
 
     while(i == -1){
 
@@ -259,7 +258,6 @@ void how_to_play(void){
 
     fclose(file);
 }
-
 
 void print_winner(void){
 
