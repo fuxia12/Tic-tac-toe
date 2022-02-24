@@ -113,7 +113,7 @@ void print_board(void){
 
 int verify_play(void){
 
-    if(strncmp(board[info.move_status_int], "X", 1) == 0 || strncmp(board[info.move_status_int], "O", 1) == 0)
+    if(board[info.move_status_int][0] == 'X' || board[info.move_status_int][0] == 'O')
         return -1;
 
     return 0;
