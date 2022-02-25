@@ -1,6 +1,6 @@
 # Tic-tac-Toe
 
-"**[Tic-tac-toe](https://tictactoebeast.com/post/what-is-tic-tac-toe-game/ "Tic-tac-toe")** (also called noughts and crosses) is a pencil-and-paper game for two players, **X** and **O**, who take turns marking the spaces in a **3×3** grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game."
+**[Tic-tac-toe](https://tictactoebeast.com/post/what-is-tic-tac-toe-game/ "Tic-tac-toe")** (also called noughts and crosses) is a pencil-and-paper game for two players, **X** and **O**, who take turns marking the spaces in a **3×3** grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
 This **Tic-tac-toe** model was developed with the user's entertainment in mind, so this project has some mechanisms that help with this, such as: report generator for each match, read the reports generated easily and among others. In addition, the project has two game modes, namely **Player x Player** and **Human x Computer**.
 
@@ -11,10 +11,10 @@ This **Tic-tac-toe** model was developed with the user's entertainment in mind, 
 ## Instalation
 
 ```shell
-git clone https://github.com/fuxia12/Tic-tac-toe
-cd Tic-tac-toe
-make
-./tic-tac-toe
+$ git clone https://github.com/fuxia12/Tic-tac-toe
+$ cd Tic-tac-toe
+$ make
+$ ./tic-tac-toe
 ```
 
 ## Usage
