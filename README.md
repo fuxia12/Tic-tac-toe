@@ -8,7 +8,7 @@ This **Tic-tac-toe** model was developed with the user's entertainment in mind, 
 
 - **[GCC](https://gcc.gnu.org/)** >= 11.2.0
 
-## Instalation
+## Installation
 
 ```shell
 $ git clone https://github.com/fuxia12/Tic-tac-toe
