@@ -31,11 +31,8 @@ Using this **Tic-tac-toe** game is very simple, and below is some useful informa
 
 - The style of this **Tic-tac-toe** game is based on the chess format, for example: `C1, A2, B3` to make a move on those squares of the 3x3 board. If you want to learn more about how to play and other information, go to **"How to Play"** in the menu.
 
-![Menu](https://github.com/fuxia12/Tic-tac-toe/help/menu.png)
+![Menu](https://github.com/fuxia12/Tic-tac-toe/blob/main/help/menu.png?raw=true)
 
 ## Other information
 
 > NOTE: This project was developed with GNU/Linux in mind, which means that it will not run on Windows-like environments. If you want to run this application in your Windows environment try using features like **[WSL](https://docs.microsoft.com/en-us/windows/wsl/install)** or Virtualization with **[VMware](https://customerconnect.vmware.com/downloads/#all_products)** or **[VirtualBox](https://www.virtualbox.org/wiki/Downloads)**.
-
-> 
-
