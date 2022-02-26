@@ -8,7 +8,10 @@ if [ $# -lt 1 ] || [ $# -gt 1 ]; then
 else
 	if [ $1 = "-h" ]; then
 		echo "Use: ./read-report <code>"
+	elif [ -e reports/report-$1.txt ]; then
+		clear
+		cat reports/report-$1.txt
+	else
+		echo "[-] Invalid ID code" >&2
 	fi
-
-	cat reports/report-$1.txt
 fi

@@ -18,11 +18,17 @@ C       |     |  X
    _____|_____|______
         |     |       
 
-[-] A general report of each game is always generated at the end of a match with an 
-identification code. The reports are saved in the <reports> directory.
+[-] In Player x Player mode it is necessary to enter the nickname of both players 
+that will participate in the match.
 
-[-] There are two important scripts: clear-reports and read-reports. 
-The clear-reports script serves to delete all previously generated reports 
-within the <reports> directory. The read-report script is used to read a 
-specific report from its identification code and to use it run the script 
-by sending a valid identification code as parameter.
+[-] A report is generated at the end of each match and contains general 
+information about that match. These reports are generated in the reports 
+directory with certain identification codes for each report.
+
+[-] The clear-reports script located inside the reports directory has the 
+functionality to delete all previously generated reports and use it when necessary.
+
+[-] There is another script that is interesting to use and makes reading 
+reports easier - the read-report script is used to read reports generated 
+from your ID code. Use ./read-report -h to understand how to use it.
+

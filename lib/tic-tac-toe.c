@@ -1,10 +1,10 @@
-// Author: @fuxia.12 - https://github.com/fuxia12
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 
+// Struct used to store useful information 
+// during application execution
 
 typedef struct{
     char players[2][10];
@@ -28,22 +28,24 @@ void clear(void){
 
 int generate_report(void){
     
+    // Generates the match reports
+
     char file_path[30] = "reports/report-";
-    char improvised[5];
+    char code[5];
     
     srand(time(NULL));
     time_t seconds;
     time(&seconds);
     struct tm *ptime = localtime(&seconds);
 
-    snprintf(improvised, 5, "%d", rand()%10000);
-    strcat(file_path, improvised);
+    snprintf(code, 5, "%d", rand()%10000);
+    strcat(file_path, code);
     strcat(file_path, ".txt");
 
     FILE *file = fopen(file_path, "w");
 
     if(file == NULL){
-        fprintf(stderr, "\n::> The report for this match could not be generated. Possible cause: the reports directory doesn't have write permissions. \n\n");
+        fprintf(stderr, "\n::> The report for this match could not be generated. Possible cause: \nthe reports directory doesn't have write permissions. \n");
         return 0;
     }
   
@@ -74,7 +76,7 @@ int generate_report(void){
     fprintf(file, "_____|_____|______\n");
     fprintf(file, "     |     |       \n");
 
-    printf("\n::> Report generated in the reports directory with the identification code <%s>. \n", improvised);
+    printf("\n::> Report generated in the reports directory with the identification code <%s>. \n", code);
 
     fclose(file);
 }
@@ -121,6 +123,8 @@ int verify_play(void){
 
 int translate(char *move){
    
+    // Translates the user's move to the equivalent on the board
+
     if(strlen(move) > 2 || strlen(move) < 2)
         return -1;
 
@@ -217,10 +221,10 @@ int verify_winner(){
     
     else if(board[2][0] == board[4][0] && board[4][0] == board[6][0])
         return 0;
-    
+        
 
     for(int i = 0; i < 9; i++){
-        if(board[i][0] == ' ')
+        if(board[i][0] == ' ' || board[i][0] == '.' || board[i][0] == '-')
             return -1;
     }
 
@@ -229,6 +233,8 @@ int verify_winner(){
 
 void computer_move(void){
     
+    // Random cumputer movements
+
     int i = -1;
 
     while(i == -1){
@@ -243,13 +249,17 @@ void computer_move(void){
     board[info.move_status_int][0] = info.moves[1];
 }
 
-void how_to_play(void){
+int how_to_play(void){
+
+    // Read the help file and display it for the user
 
     char buffer[100];
     FILE *file = fopen("help/help.txt", "r");
 
-    if(file == NULL)
-        fprintf(stderr, "Error: Help file doesn't exist or doesn't have read permission.\n");
+    if(file == NULL){
+        fprintf(stderr, "\n::> Error: Help file doesn't exist or doesn't have read permission.\n");
+        return 0;
+    }
     
     clear();
 
@@ -269,7 +279,6 @@ void print_winner(void){
     else
         printf("\n::> %s won!\n", info.winning_player);
 }
-
 
 void with_friends(void){
 
@@ -338,10 +347,8 @@ void with_computer(void){
         printf("\n[%c] %s::> ", info.moves[0], info.players[0]);
         scanf("%s", player_input);
 
-        if(player_status == 0){
-            if(mark_board(player_input, player_status) == -1)
-                 continue;
-        }
+        if(mark_board(player_input, player_status) == -1)
+            continue;
 
         i = verify_winner();
         
