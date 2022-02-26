@@ -1,4 +1,4 @@
-# Tic-tac-Toe [![License](https://img.shields.io/badge/license-MIT-green)](https://mit-license.org/) ![Code Size](https://img.shields.io/github/languages/code-size/fuxia12/Tic-tac-toe) ![Last Commit](https://img.shields.io/github/last-commit/fuxia12/Tic-tac-toe/main)
+# Tic-Tac-Toe [![License](https://img.shields.io/badge/license-MIT-green)](https://mit-license.org/) ![Code Size](https://img.shields.io/github/languages/code-size/fuxia12/Tic-tac-toe) ![Last Commit](https://img.shields.io/github/last-commit/fuxia12/Tic-tac-toe/main)
 
 **[Tic-tac-toe](https://tictactoebeast.com/post/what-is-tic-tac-toe-game/ "Tic-tac-toe")** (also called noughts and crosses) is a pencil-and-paper game for two players, **X** and **O**, who take turns marking the spaces in a **3×3** grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
