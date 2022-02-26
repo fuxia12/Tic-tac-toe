@@ -11,6 +11,7 @@ tic-tac-toe: $(MAIN) $(LIB_TARGET)
 $(LIB_TARGET): $(LIB_C)
 	$(CC) -c $(LIB_C) -o $(LIB_TARGET)
 
-clean: 
+clean:
 	rm -f $(LIB_TARGET) $(TARGET)
 
+all: clean tic-tac-toe
