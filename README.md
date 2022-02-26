@@ -19,8 +19,6 @@ $ ./tic-tac-toe
 
 ## Usage
 
----
-
 ![Menu](https://github.com/fuxia12/Tic-tac-toe/blob/main/help/menu.png?raw=true)
 
 Using this **Tic-tac-toe** game is very simple, and below is some useful information on how to use it:
