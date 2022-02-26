@@ -15,3 +15,4 @@ clean:
 	rm -f $(LIB_TARGET) $(TARGET)
 
 all: clean tic-tac-toe
+
