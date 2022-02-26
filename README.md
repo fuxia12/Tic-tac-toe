@@ -31,6 +31,7 @@ Using this **Tic-tac-toe** game is very simple, and below is some useful informa
 
 - The style of this **Tic-tac-toe** game is based on the chess format, for example: `C1, A2, B3` to make a move on those squares of the 3x3 board. If you want to learn more about how to play and other information, go to **"How to Play"** in the menu.
 
+![Menu](https://github.com/fuxia12/Tic-tac-toe/help/menu.png)
 
 ## Other information
 
