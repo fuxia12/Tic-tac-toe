@@ -14,4 +14,4 @@ $(LIB_TARGET): $(LIB_C)
 clean:
 	rm -f $(LIB_TARGET) $(TARGET)
 
-all: clean tic-tac-toes
+all: clean tic-tac-toe
