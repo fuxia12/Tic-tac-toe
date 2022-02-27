@@ -91,13 +91,17 @@ void menu(void){
 }
 
 void reset_board(void){
-    for(int i = 0; i < 9; i++){
+    for(int i = 0; i < 9; i++){  
+        
         board[i][0] = ' ';
+        
+        if(i == 2)
+            board[i][0] = '.';
+        else if(i == 4)
+            board[i][0] = '-';
+        else if(i == 6)
+            board[i][0] = '.';
     }
-
-    board[2][0] = '.';
-    board[4][0] = '-';
-    board[6][0] = '.';
 }
 
 void print_board(void){
