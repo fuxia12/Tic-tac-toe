@@ -104,6 +104,7 @@ void reset_board(void){
             case 6:
                 board[i][0] = '.';
                 break;
+        }
     }
 }
 
