@@ -31,4 +31,3 @@ functionality to delete all previously generated reports and use it when necessa
 [-] There is another script that is interesting to use and makes reading 
 reports easier - the read-report script is used to read reports generated 
 from your ID code. Use ./read-report -h to understand how to use it.
-

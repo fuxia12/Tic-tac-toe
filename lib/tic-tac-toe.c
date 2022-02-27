@@ -366,5 +366,3 @@ void with_computer(void){
         generate_report();
     }
 }   
-
-
