@@ -17,9 +17,9 @@ typedef struct{
 Information info;
 
 char board[9][1] = {
-                    {" "}, {" "}, {"."},
-                    {" "}, {"-"}, {" "}, 
-                    {"."}, {" "}, {" "}
+                    {" "}, {" "}, {" "},
+                    {" "}, {" "}, {" "}, 
+                    {" "}, {" "}, {" "}
                     };
 
 void clear(void){
@@ -93,18 +93,6 @@ void menu(void){
 void reset_board(void){
     for(int i = 0; i < 9; i++){  
         board[i][0] = ' ';
-        
-        switch(i){
-            case 2:
-                board[i][0] = '.';
-                break;
-            case 4:
-                board[i][0] = '-';
-                break;
-            case 6:
-                board[i][0] = '.';
-                break;
-        }
     }
 }
 
@@ -197,42 +185,50 @@ int mark_board(char *move, int player_status){
     return 0;
 }
 
+int verify_position(int position){
+    
+    if(board[position][0] == 'X' || board[position][0] == 'O')
+        return 0;
+
+    return 1;
+}
+
 int verify_winner(){
 
     // Horizontal
 
-    if(board[0][0] == board[1][0] && board[1][0] == board[2][0])
+    if((board[0][0] == board[1][0] && board[1][0] == board[2][0]) && (verify_position(0) == 0))
         return 0;
     
-    else if(board[3][0] == board[4][0] && board[4][0] == board[5][0])
+    else if((board[3][0] == board[4][0] && board[4][0] == board[5][0]) && (verify_position(3) == 0))
         return 0;
     
-    else if(board[6][0] == board[7][0] && board[7][0] == board[8][0])
+    else if((board[6][0] == board[7][0] && board[7][0] == board[8][0]) && (verify_position(6) == 0))
         return 0;
     
     // Vertical
 
-    else if(board[0][0] == board[3][0] && board[3][0] == board[6][0])
+    else if((board[0][0] == board[3][0] && board[3][0] == board[6][0]) && (verify_position(0) == 0))
         return 0;
     
-    else if(board[1][0] == board[4][0] && board[4][0] == board[7][0])
+    else if((board[1][0] == board[4][0] && board[4][0] == board[7][0]) && (verify_position(1) == 0))
         return 0;
     
-    else if(board[2][0] == board[5][0] && board[5][0] == board[8][0])
+    else if((board[2][0] == board[5][0] && board[5][0] == board[8][0]) && (verify_position(2) == 0))
        
         return 0;
     
     // Diagonal
 
-    else if(board[0][0] == board[4][0] && board[4][0] == board[8][0])
+    else if((board[0][0] == board[4][0] && board[4][0] == board[8][0]) && (verify_position(0) == 0))
         return 0;
     
-    else if(board[2][0] == board[4][0] && board[4][0] == board[6][0])
+    else if((board[2][0] == board[4][0] && board[4][0] == board[6][0]) && (verify_position(2) == 0))
         return 0;
         
 
     for(int i = 0; i < 9; i++){
-        if(board[i][0] == ' ' || board[i][0] == '.' || board[i][0] == '-')
+        if(board[i][0] == ' ')
             return -1;
     }
 
