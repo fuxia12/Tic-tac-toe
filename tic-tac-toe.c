@@ -41,14 +41,14 @@ int main(){
             case 1: 
                 with_friends();
 
-				if(return_menu())
-					continue;
+		if(return_menu())
+		   continue;
 
             case 2:
                 with_computer();
 
-				if(return_menu())
-					continue;
+		if(return_menu())
+		   continue;
 
             case 3:
                 how_to_play();
