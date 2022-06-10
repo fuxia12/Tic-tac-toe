@@ -4,10 +4,6 @@
 
 This **Tic-tac-toe** model was developed with the user's entertainment in mind, so this project has some mechanisms that help with this, such as: report generator for each match, read the reports generated easily and among others. In addition, the project has two game modes, namely **Player x Player** and **Human x Computer**.
 
-## Requirements
-
-- **[GCC](https://gcc.gnu.org/)** - `11.2.0`
-
 ## Installation
 
 ```shell
@@ -36,4 +32,4 @@ Using this **Tic-tac-toe** game is very simple, and below is some useful informa
 
 ## Other information
 
-> NOTE: This project was developed with GNU/Linux in mind, which means that it will not run on Windows-like environments. If you want to run this application in your Windows environment try using features like **[WSL](https://docs.microsoft.com/en-us/windows/wsl/install)** or Virtualization with **[VMware](https://customerconnect.vmware.com/downloads/#all_products)**, **[VirtualBox](https://www.virtualbox.org/wiki/Downloads)** and other applications for that purpose.
+> NOTE: This project was developed with GNU/Linux in mind, which means that it will not run on Windows-like environments. If you want to run this application in your Windows environment try using features like **[WSL](https://docs.microsoft.com/en-us/windows/wsl/install)**.
